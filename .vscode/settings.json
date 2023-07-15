@@ -1,0 +1,7 @@
+{
+  "rust-analyzer.linkedProjects": [
+    "./plugins/single-instance/Cargo.toml",
+    "./plugins/single-instance/Cargo.toml",
+    "./plugins/single-instance/Cargo.toml"
+  ]
+}

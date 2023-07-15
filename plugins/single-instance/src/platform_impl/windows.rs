@@ -29,7 +29,7 @@ const WMCOPYDATA_SINGLE_INSTANCE_DATA: usize = 1542;
 pub fn init<R: Runtime>(f: Box<SingleInstanceCallback<R>>) -> TauriPlugin<R> {
     plugin::Builder::new("single-instance")
         .setup(|app| {
-            let mut id = &app.config().tauri.bundle.identifier;
+            let mut id = (&app.config().tauri.bundle.identifier).to_owned();
             id.push('_');
             id.push_str(semver_compat_string(app.package_info().version.clone()).as_str());
 
